@@ -1,50 +1,206 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h1>ХХ и в продакшн без стыда</h1>
+				</section>
+				<section>
+					<h2 style="text-align: left;">Никита Русин</h2>
+					<ul>
+						<li>Разработчик</li>
+						<li>Ex. android lead KODE</li>
+						<li>Много смотрел, слушал и читал</li>
+						<li>Много думал</li>
+						<li>Много делал</li>
+						<li>Давал советы и смотрел что будет. Шутка про хорошо поставленный эксперимент</li>
+						<li>Сейчас ассимилируюсь в App in the air</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>Проблема</h1>
+				</section>
+				<section>
+					<!-- забавный бекграунд с фоткой бори с нарисованной бородой -->
+					<h2 style="text-align: left;">Ситуация</h2>
+					<ul>
+						<li>Вы разработчик</li>
+						<li>В быстро развивающемся продукте или аутсорсе</li>
+						<li>И вам нужно:</li>
+						<li>Что?: Делать и переделывать</li>
+						<li>Как?: Быстро, качественно и не стыдно</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>Почему так</h1>
+					Немного истории
+				</section>
+				<section>
+					<!-- бекграунды с старыми страшными сайтами, пиздецким 1C -->
+					<!-- Было время когда просто были html странички и формы. Хоп, хоп и готово -->
+					<!-- Потом появились фронтенд приложения и мобилки. И всё пошло по бороде -->
+					<!-- Неправильно: был кровавый десктоп, который тоже был клиен-серверный если сам не ходил в базу -->
+					<!-- Почему? Это всё тупые пользователи. Они хотят чтобы всё было удобно, плавно, 
+						со всякими свистелками-перделками и использовало фичи платформы -->
+					<!-- Вывод: нам придётся мириться с тем, что для серьёзных вещей нельзя просто выплёвывать html'ки используя шаблончики -->
+				</section>
+				<section>
+					Возражения
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>Приёмы и идеи</h1>
+					<!-- Ценности: эффективность, agility, качество, простота. -->
+				</section>
+				<section>
+					<h1>Ценности</h1>
+					Эффективность
+					Agility
+					Качество
+					Простота
+					<!-- Ценности - основа, направляющая мысль команды и архитектуру продукта, лакмусовая бумажка проверки решений -->
+				</section>
+				<!-- Не хотим писать много кода, хотим реиспользовать. Абстракция и композиция. Будем выделять обобщее и разбивать комплексное на простые состовляющие -->
+				<!-- Будем чаще менять там, где это дешевле. Server driven (https://youtu.be/Vs-D2Fb3xEU https://proandroiddev.com/dynamic-screens-using-server-driven-ui-in-android-262f1e7875c1), тонкий клиент, Hypermedia API. (https://youtu.be/G9apMqwRedA?t=1604 https://apisyouwonthate.com/blog/rest-and-hypermedia-in-2019 https://habr.com/ru/company/aligntechnology/blog/281206/)
+						Будем забирать ответственность и логику с клиента -->
+				<!-- Не будем пытаться съесть слона за один присест. Обобщим, но ровно столько сколько нужно, с заделом на недалёкое будущее -->
+				<!-- пример с пагинацией для разогрева -->
+				<section>
+					Вопросы про описанные принцыпы
+				</section>
+			</section>
+			<section>
+				Начинается мякотка
+			</section>
+			<section>
+				<section>
+					Информационные компоненты
+				</section>
+				<section>
+					<!-- пример с информационными экранами (профили, детали, чек), разбитие на поля, а не передача объекта -->
+					<!-- примерное api и простая реализация на коленке с прокси регистром компонентов -->
+					<!-- вопросы и возражения -->
+					<!-- возражения: убого выглядит, сложно, долго, нет оффлайна -->
+				</section>
+			</section>
+			<section>
+				<section>
+					Формы
+				</section>
+				<section>
+					<!-- пример с формами (регистрация, создание объекта, платёж) -->
+					<!-- пример способа простой реализации -->
+					<!-- TODO ссылка на доклад чувака с фронтенда -->
+				</section>
+			</section>
+			<section>
+				<section>
+					Другие компоненты
+				</section>
+				<section>
+					<!-- пример конструируемых списочный и нет экранов (отсылка к ozon) -->
+					<!-- передачи логики действий навигации и событий аналитики на сервер -->
+				</section>
+			</section>
+			<section>
+				Во что это может вылиться
+				<!-- возможные развития: ab тестирование, CMS и админка для программирования мышкой -->
+			</section>
+			<section>
+				Вопросы по формам и другим компонентам
+			</section>
+			<section>
+				Итог
+				<!-- Подвожу черту, о чём поговорили. 
+					Обсудили почему мы не можем всё фигачить на вордпресе и битриксе. 
+					Обсудили что ценности помогают в построении архитектуры
+					Обсудили как можно сделать реиспользуемыми и максимально гибкими всякие информационные экраны, формы или по немногу много где
+				 -->
+				<!-- выводы: создавайте для своего продукта и компании настроенную под вас платформу для быстрой и гибкой разработки, обобщайте и повышаете эффективность -->
+			</section>
+			<section>
+				Спасибо
+				<!-- Контакты -->
+			</section>
+			<!-- 
+"реиспользуемое архитектурное решение для ускорения разработки нового функционала" 
+
+Ключевая мысль "делайте платформу/фреймворк для разработки, а не бесконечные ручки и экраны"
+
+Расскажу про пару подходов в проектировании api. А потом на примере форм и информационных экранов дам готовый шаблон внутренней технологии для их быстрого создания
+				 -->
+
+			<!-- 
+- История: было время когда просто были html странички и формы. Хоп, хоп и готово
+- Проблемма: нужно быстро делать и переделывать не говнокодя
+- server driven, тонкий клиент и забирание ответственности и логики с клиента
+- пример с пагинацией для разогрева
+- вопросы
+- пример с информационными экранами (профили, детали, чек), разбитие на поля, а не передача объекта
+- примерное api и простая реализация на коленке с прокси регистром компонентов
+- вопросы и возражения
+- возражения: убого выглядит, сложно, долго, нет оффлайна
+- пример с формами (регистрация, создание объекта, платёж)
+- пример способа простой реализации
+- вопросы
+- пример передачи логики действий навигации и событий аналитики на сервер. Ссылки)
+- пример конструируемых списочный экранов (отсылка к ozon)
+- возможные развития: ab тестирование, CMS и админка для программирования мышкой, 
+- выводы: создавайте для своего продукта и компании настроенную под вас платформу для быстрой и гибкой разработки, обобщайте и повышаете эффективность
+				  -->
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
