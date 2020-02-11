@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
@@ -31,6 +31,27 @@
 				<section>
 					<h1>ХХ и в продакшн без стыда</h1>
 				</section>
+
+				<section>
+					<h2 style="text-align: left;">Проблематика</h2>
+					<ul>
+						<!-- забавный бекграунд с фоткой Бори с нарисованной бородой -->
+						<li>Вы обычный бэкенд-разработчик</li>
+						<!-- TODO картинка экрана пользователя -->
+						<li>Экран информации пользователя</li>
+						<li>Нужно добавить 2 поля, а одно убрать</li>
+						<li>По человекодню на каждом клиенте и на беке</li>
+						<li>А потом ждать пока пользователи обновятся</li>
+						<li>Поддерживать обратную совместимость в API</li>
+						<!-- Картинка мема с грустящим чуваком просыпающим песок -->
+						<li>PM/PO/бизнес расстроен</li>
+						<li>Знакомо? Возможно, вы не понимаете почему так</li>
+						<li>Я расскажу, почему так и как сделать, чтобы подобные изменения требовали только за 2 часа
+							бэкендера</li>
+						<li>Как сделать систему целиком максимально гибкой</li>
+					</ul>
+				</section>
+
 				<section>
 					<h2 style="text-align: left;">Никита Русин</h2>
 					<ul>
@@ -39,149 +60,509 @@
 						<li>Много смотрел, слушал и читал</li>
 						<li>Много думал</li>
 						<li>Много делал</li>
-						<li>Давал советы и смотрел что будет. Шутка про хорошо поставленный эксперимент</li>
-						<li>Сейчас ассимилируюсь в App in the air</li>
+						<li>Давал советы и смотрел что будет</li>
+						<li>Сейчас ассимилируюсь в App in the Air</li>
 					</ul>
 				</section>
 			</section>
 
 			<section>
 				<section>
-					<h1>Проблема</h1>
-				</section>
-				<section>
-					<!-- забавный бекграунд с фоткой бори с нарисованной бородой -->
-					<h2 style="text-align: left;">Ситуация</h2>
-					<ul>
-						<li>Вы разработчик</li>
-						<li>В быстро развивающемся продукте или аутсорсе</li>
-						<li>И вам нужно:</li>
-						<li>Что?: Делать и переделывать</li>
-						<li>Как?: Быстро, качественно и не стыдно</li>
-					</ul>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h1>Почему так</h1>
+					<h1>Почему так долго, ведь всё же просто</h1>
 					Немного истории
 				</section>
 				<section>
-					<!-- бекграунды с старыми страшными сайтами, пиздецким 1C -->
-					<!-- Было время когда просто были html странички и формы. Хоп, хоп и готово -->
-					<!-- Потом появились фронтенд приложения и мобилки. И всё пошло по бороде -->
-					<!-- Неправильно: был кровавый десктоп, который тоже был клиен-серверный если сам не ходил в базу -->
-					<!-- Почему? Это всё тупые пользователи. Они хотят чтобы всё было удобно, плавно, 
-						со всякими свистелками-перделками и использовало фичи платформы -->
+					<h1>Было время, когда всё было просто</h1>
+					<!-- TODO бекграунды с старыми страшными сайтами -->
+					<!-- Было время когда просто были html странички, ссылки и формы, всё меняется на сервере. Хоп, хоп и готово -->
+					<ul>
+						<li>HTML</li>
+						<li>Ссылки</li>
+						<li>Формы</li>
+						<li>Берёшь и делаешь</li> <!-- меняешь в одном месте и обновляется у всех клиентов -->
+					</ul>
 					<!-- Вывод: нам придётся мириться с тем, что для серьёзных вещей нельзя просто выплёвывать html'ки используя шаблончики -->
 				</section>
 				<section>
-					Возражения
+					<!-- TODO бекграунд cо смузи разработчиками, 
+							чуваки с подворотами и зализанными усами -->
+					<!-- Потом появились фронтенд приложения и мобилки. И всё пошло по бороде -->
+					<h2>А потом появились они</h2>
+					<h4>Всадники апокалипсиса</h4>
+					<ul>
+						<li>Desktop</li>
+						<li>Mobile x2</li>
+						<li>Frontend</li>
+					</ul>
+					<!-- Ведь правда же? Так всё и было? -->
+				</section>
+				<section>
+					<h1>На самом деле нет</h1>
+					<ul>
+						<li>Desktop был всегда</li> <!-- они просто научились в клиент-сервер -->
+						<li>Веб почему-то не заменяет mobile и desktop</li>
+						<!-- Джобс был не прав с браузером на первом айфоне -->
+						<li>Популярные сервисы использую frontend фреймворки</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Пользователь охренел?</h1>
+					<ul>
+						<li>Хочет, чтобы было плавно</li>
+						<li>Не хочет смотреть в белый экран пока что-то ищется</li>
+						<li>Хочет использовать фишки платформы</li>
+						<li>А ещё есть игры</li>
+					</ul>
+				</section>
+				<section>
+					<!-- Что-то грустное на фоне -->
+					<h1>Вывод</h1>
+					<ul>
+						<li>Приложения будут всегда</li>
+						<li>Их сообщества</li>
+						<li>Инструменты разработки</li>
+						<li>Релизный лаг</li>
+						<li>И баги</li>
+						<!-- Какой-нибудь мемчик -->
+					</ul>
 				</section>
 			</section>
 
 			<section>
 				<section>
 					<h1>Приёмы и идеи</h1>
-					<!-- Ценности: эффективность, agility, качество, простота. -->
+					<h6 class="fragment">Смириться и терпеть</h6>
+					<h6 class="fragment">Что-то придумать</h6>
 				</section>
 				<section>
 					<h1>Ценности</h1>
-					Эффективность
-					Agility
-					Качество
-					Простота
-					<!-- Ценности - основа, направляющая мысль команды и архитектуру продукта, лакмусовая бумажка проверки решений -->
+					<ul>
+						<li>Эффективность</li>
+						<li>Agility</li>
+
+						<aside class="notes">
+							Ценности - основа, направляющая мысль команды и архитектуру продукта, лакмусовая бумажка
+							проверки решений
+
+							В быстро развивающемся продукте или аутсорсе
+							Делать и переделывать. Быстро, качественно и не стыдно
+						</aside>
+					</ul>
 				</section>
-				<!-- Не хотим писать много кода, хотим реиспользовать. Абстракция и композиция. Будем выделять обобщее и разбивать комплексное на простые состовляющие -->
-				<!-- Будем чаще менять там, где это дешевле. Server driven (https://youtu.be/Vs-D2Fb3xEU https://proandroiddev.com/dynamic-screens-using-server-driven-ui-in-android-262f1e7875c1), тонкий клиент, Hypermedia API. (https://youtu.be/G9apMqwRedA?t=1604 https://apisyouwonthate.com/blog/rest-and-hypermedia-in-2019 https://habr.com/ru/company/aligntechnology/blog/281206/)
-						Будем забирать ответственность и логику с клиента -->
+				<section>
+					<h1>Где часто менять проще всего?</h1>
+					<h6 class="fragment">В заднем конце</h6>
+				</section>
+				<section data-background-image="https://media.giphy.com/media/12gTXYTS09oST6/giphy.gif">
+					<h1><span style="color:white">Микросервисы</span></h1>
+				</section>
+				<section>
+					<!-- 
+						Будем забирать ответственность и логику с клиента. Делать его как можно тоньше. 
+						Будем чаще менять там, где это дешевле. -->
+					<h1>Hypermedia API</h1>
+					<p><a href="https://youtu.be/G9apMqwRedA?t=1604">link</a> <a
+							href="https://fideloper.com/description-of-hypermedia-apis">link</a> <a
+							href="https://apisyouwonthate.com/blog/rest-and-hypermedia-in-2019">link</a> <a
+							href="https://habr.com/ru/company/aligntechnology/blog/281206/">link</a></p>
+					<h1>Server-driven UI</h1>
+					<p><a href="https://youtu.be/Vs-D2Fb3xEU">link</a> <a
+							href="https://www.youtube.com/watch?v=RYQyA4VmnJo">link</a> <a
+							href="https://proandroiddev.com/dynamic-screens-using-server-driven-ui-in-android-262f1e7875c1">link</a>
+					</p>
+					<p>TODO Картинка где водит сервер</p>
+				</section>
 				<!-- Не будем пытаться съесть слона за один присест. Обобщим, но ровно столько сколько нужно, с заделом на недалёкое будущее -->
 				<!-- пример с пагинацией для разогрева -->
 				<section>
-					Вопросы про описанные принцыпы
+					<h2>Hypermedia API - минимизация клиентской логики</h2>
+					<h6>Пользователь</h6>
+					<ul>
+						<li>Смотрит на страницу</li>
+						<li>Кликает на ссылки</li>
+						<li>Заполняет форму</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Пример: Разные разрешения для разных ролей и статусов</h2>
+					<!-- Разные плитки перехода к функционалу для разных ролей -->
+					<!-- Разные ограничения действий с картами -->
+					<!-- TODO -->
+				</section>
+				<section>
+					<h2>Пример: Разные разрешения для разных ролей и статусов</h2>
+					<pre><code class="js" data-line-numbers="2-7|8-11|12-15|12,16|2-20">
+						{
+							"cards": [
+								{
+									"url": "kitty.jpg",
+									"shape": "circle",
+									"gravity": "center"
+								}
+							] 
+						}
+						
+											</code></pre>
+				</section>
+				<section
+					data-background-image="https://media.giphy.com/media/XHVmD4RyXgSjd8aUMb/giphy-downsized-large.gif">
 				</section>
 			</section>
 			<section>
-				Начинается мякотка
+				<h1>Начинается мякотка...</h1>
 			</section>
 			<section>
 				<section>
-					Информационные компоненты
+					<h2>Информационные компоненты</h2>
 				</section>
-				<section>
-					<!-- пример с информационными экранами (профили, детали, чек), разбитие на поля, а не передача объекта -->
-					<!-- примерное api и простая реализация на коленке с прокси регистром компонентов -->
-					<!-- вопросы и возражения -->
-					<!-- возражения: убого выглядит, сложно, долго, нет оффлайна -->
-				</section>
-			</section>
-			<section>
-				<section>
-					Формы
-				</section>
-				<section>
-					<!-- пример с формами (регистрация, создание объекта, платёж) -->
-					<!-- пример способа простой реализации -->
-					<!-- TODO ссылка на доклад чувака с фронтенда -->
-				</section>
-			</section>
-			<section>
-				<section>
-					Другие компоненты
-				</section>
-				<section>
-					<!-- пример конструируемых списочный и нет экранов (отсылка к ozon) -->
-					<!-- передачи логики действий навигации и событий аналитики на сервер -->
-				</section>
-			</section>
-			<section>
-				Во что это может вылиться
-				<!-- возможные развития: ab тестирование, CMS и админка для программирования мышкой -->
-			</section>
-			<section>
-				Вопросы по формам и другим компонентам
-			</section>
-			<section>
-				Итог
-				<!-- Подвожу черту, о чём поговорили. 
-					Обсудили почему мы не можем всё фигачить на вордпресе и битриксе. 
-					Обсудили что ценности помогают в построении архитектуры
-					Обсудили как можно сделать реиспользуемыми и максимально гибкими всякие информационные экраны, формы или по немногу много где
-				 -->
-				<!-- выводы: создавайте для своего продукта и компании настроенную под вас платформу для быстрой и гибкой разработки, обобщайте и повышаете эффективность -->
-			</section>
-			<section>
-				Спасибо
-				<!-- Контакты -->
-			</section>
-			<!-- 
-"реиспользуемое архитектурное решение для ускорения разработки нового функционала" 
+				<section data-background-image="lib/images/info_1.jpg"></section>
+				<section data-background-image="lib/images/info_2.jpg"></section>
+				<section data-background-image="lib/images/info_3.jpg"></section>
+				<section data-background-image="lib/images/info_4.jpg"></section>
+				<section data-background-image="lib/images/info_5.jpg"></section>
+				<section data-background-image="lib/images/info_6.jpg"></section>
+				<section data-fullscreen>
+					<h6>JSON API</h6>
+					<pre><code class="js" data-line-numbers="2-7|8-11|12-15|12,16|2-20">
+{
+	"image.1": {
+		"url": "kitty.jpg",
+		"shape": "circle",
+		"gravity": "center"
+	},
+	"header_1.1": {
+		"text": "Header text",
+		"collapsing": false
+	},
+	"text_1.1": {
+		"text": "Imagine long text here",
+		"collapse_lines": 3
+	},
+	"text_1.2": {
+		"text": "Imagine long text here",
+		"collapse_lines": 3
+	}
+}
 
-Ключевая мысль "делайте платформу/фреймворк для разработки, а не бесконечные ручки и экраны"
+					</code></pre>
+				</section>
+				<section>
+					<h6>Как сделать?</h6>
+					<h1 class="fragment">Как хотите,</h1>
+					<h6 class="fragment">Но могу направить</h6>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="python">
+@app.route('/component/&lt;path:component_id&gt;')
+def get_component(component_id: str):
+	# спроси почему не отдельными GET методами или молчи вечно
+	return componentsRegistry.build(
+		component_id, 
+		request.headers, 
+		request.args
+	)
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="python">
+@component('v2', 'group_1')
+def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
+	user = context.db().getUser(user_id)
+	return context.component_builder()
+		.picture(user.picture)
+		.title(user.fullname)
+		...
+		.buld()
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="python">
+@component('v2', 'group_1')
+def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
+	builder = context.component_builder()
+	return context.domain()
+		.users()
+		.self(user_id)
+		.success(lambda user: User -> builder
+			.picture(user.picture)
+			.title(user.fullname)
+			...
+			.buld()
+		)
+		.error(lambda error: Error -> builder
+			.common_error(error.message)
+			.build()
+		)
+				</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="kotlin">
+@Component('v2', 'group_1')
+fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
+	context.domain().users().self(user_id).build {
+		success {
+			picture(picture)
+			title(fullname)
+		}
+		error {
+			common_error(error.message)
+		}
+	}
+}
+				</code></pre>
+				</section>
+				<section data-background-image="https://media.giphy.com/media/PK4XAT9Ususco/giphy.gif">
+					<h3>Вопросы и возражения</h3>
+				</section>
+				<section>
+					<h5>Возражения:</h5>
+					<ul>
+						<li class="fragment">Убого будет выглядеть, неконсистентно</li>
+						<li class="fragment">Сложно/долго делать</li>
+						<li class="fragment">Больше трафика</li>
+						<li class="fragment">Без офлайна</li>
+						<li class="fragment">Обратная совместимость</li>
+					</ul>
+				</section>
+			</section data-fullscreen>
+			</section>
 
-Расскажу про пару подходов в проектировании api. А потом на примере форм и информационных экранов дам готовый шаблон внутренней технологии для их быстрого создания
-				 -->
+			<section>
+				<section>
+					<h3>Навигация, списки, пагинация, поиск</h3>
+				</section>
+				<section>
+					<h3>Навигация, действия</h3>
+				</section>
+				<section data-fullscreen>
+					<h6>JSON API</h6>
+					<pre><code class="js" data-line-numbers="2-16|4|7|8|12">
+{
+	"button_grid.1": {
+		"chain_type": "start|packed"
+		"value": {
+			"button.1": {
+				"text": "Click me",
+				"link": "/component/sfsfsafsa?dfs=dsf" 
+			},
+			"button.2": {
+				"text": "Don't click",
+				"action": "show_fullscreen_dick_pic"
+			}
+		}
+	},
+}
+	
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="js">
+{
+	"empty_state.1": {
+		"image": "...",
+		"title": "...",
+		"message": "..."
+		"buttons": {
+			...
+		}
+}
+	
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="js">
+{
+	"header": {
+		"image": "...",
+		"title": "..."
+	},
+	"content": {
+		"flight.sfafdf": {...},
+		"flight.fasfsf": {...},
+		"flight.dfdfdf": {...},
+		"banner.1": {...},
+		"flight.fasfsf": {...},
+		"flight.dfdfdf": {...},
+		"next_page": {
+			"trigger": "scroll_end|click_next",
+			"link": "...",
+		}
+	}
+}
+	
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="js">
+{
+	"header": {
+		"title": "...",
+		"search": {
+			"link": "/babsbsab/{input}",
+			"min_lenght": 3,
+			"suggestions": {...}
+		}
+	},
+	"content": {
+		"empty_state.1": {
+			"image": "...",
+			"title": "...",
+			"message": "..."
+	},
+}
+	
+					</code></pre>
+				</section>
+				<section
+					data-background-image="https://media.giphy.com/media/ZaJtnTY8tFZz0PvmW9/giphy-downsized-large.gif">
 
-			<!-- 
-- История: было время когда просто были html странички и формы. Хоп, хоп и готово
-- Проблемма: нужно быстро делать и переделывать не говнокодя
-- server driven, тонкий клиент и забирание ответственности и логики с клиента
-- пример с пагинацией для разогрева
-- вопросы
-- пример с информационными экранами (профили, детали, чек), разбитие на поля, а не передача объекта
-- примерное api и простая реализация на коленке с прокси регистром компонентов
-- вопросы и возражения
-- возражения: убого выглядит, сложно, долго, нет оффлайна
-- пример с формами (регистрация, создание объекта, платёж)
-- пример способа простой реализации
-- вопросы
-- пример передачи логики действий навигации и событий аналитики на сервер. Ссылки)
-- пример конструируемых списочный экранов (отсылка к ozon)
-- возможные развития: ab тестирование, CMS и админка для программирования мышкой, 
-- выводы: создавайте для своего продукта и компании настроенную под вас платформу для быстрой и гибкой разработки, обобщайте и повышаете эффективность
-				  -->
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Формы</h1>
+				</section>
+
+				<section>
+					<img data-src="lib/images/form_1.jpg" width="30%" style="border:none">
+					<img data-src="lib/images/form_2.jpg" width="30%" style="border:none">
+					<img data-src="lib/images/form_3.jpg" width="30%" style="border:none">
+				</section>
+				<section data-fullscreen>
+					<pre><code class="js"  data-line-numbers="3-7|8-12|13-15|16-19|20-24">
+{
+	"text_input.1": {
+		"hint": "...",
+		"required": true,
+		"mask": "(a-z)@(a-z).(a-z)"
+	},
+	"date.1": {
+		"hint": "...",
+		"min": "...",
+		"max": "...",
+	},
+	"phone.1": {
+		"hint": "...",
+	},
+	"money_source.1": {
+		"hint": "...",
+		"required": true
+	},
+	"money.1": {
+		"min": "...",
+		"max": "...",
+		"required": true
+	},
+}
+	
+					</code></pre>
+				</section>
+				<section data-fullscreen>
+					<pre><code class="python">
+@app.route('/component/&lt;path:component_id&gt;')
+def post_form(component_id: str):
+	return componentsRegistry.apply((
+		component_id,
+		request.headers,
+		request.json
+	)
+					</code></pre>
+				</section>
+				<section data-background-image="lib/images/talk.jpg"></section>
+				<section data-background-image="https://media.giphy.com/media/l4FGC3sZppT0imaty/giphy.gif">
+					Вопросы по формам
+				</section>
+				<section>
+					Вопрос безопасности
+				</section>
+			</section>
+			<section>
+				<section data-background-image="lib/images/flow.png">
+					<h1>Flow</h1>
+					<h6>Последовательность действий</h6>
+				</section>
+				<section>
+					<h1>Два стула</h1>
+					<ul>
+						<li class="fragment">Состояние запоминает сервер</li>
+						<li class="fragment">Запоминает клиент, но не понимает, что запомнил</li>
+					</ul>
+				</section>
+				<section>
+					<h1>State management</h1>
+					<h6>Передаваемые сервер-клиент-сервер</h6>
+					<ul>
+						<li class="fragment">Session id</li>
+						<li class="fragment">Payload</li>
+					</ul>
+				</section>
+				<section data-fullscreen>
+					<h6>В ответ на форму</h6>
+					<pre><code class="js">
+{
+	"next_link": "..."
+}
+	
+					</code></pre>
+				</section>
+				<section>
+					<h3>Авторизация</h3>
+					<ol>
+						<li class="fragment">Форма логин/пароль</li>
+						<li class="fragment">Форма данные пользователя</li>
+						<li class="fragment">Экран соглашения с кнопкой</li>
+						<li class="fragment">Экран с просьбой подтвердить почту</li>
+						<li class="fragment">Экран перехода по ссылке из почты. Финиш</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h6>Во что ещё это может вылиться?</h6>
+					<ul>
+						<li class="fragment">A/B-тесты и события аналитики без согласований</li>
+						<li class="fragment">CMS и программирование мышкой (не только под iOS)</li>
+						<li class="fragment">Конфигурация, офлайн</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>Итог</h1>
+				</section>
+				<section>
+					<h1>Выгоды</h1>
+					<ul>
+						<li class="fragment">Крути-верти и не тестируй</li>
+						<li class="fragment">Не нужно 100500 клиентских разработчиков</li>
+						<li class="fragment">A/B-тесты и события аналитики без согласований</li>
+						<li class="fragment">Иди так далеко как хочешь</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Недостатки</h1>
+					<ul>
+						<li class="fragment">Версионирование</li>
+						<li class="fragment">Скалирование и реиспользование на другие продукты</li>
+						<li class="fragment">И другие проблемы сытых людей</li>
+					</ul>
+					<aside class="notes">
+						Зубки не красивые, пузико появляется, робот плохо пылесосит, Дж. Мартин долго книгу пишет
+					</aside>
+				</section>
+				<section data-background-image="lib/images/lona.jpg"></section>
+			</section>
+
+			<section>
+				<h1>Выводы</h1>
+				<h1>Делайте сами</h1>
+			</section>
+			<section>
+				<h1>Спасибо</h1>
+				TODO Контакт и ссылки
+			</section>
+
 		</div>
 	</div>
 
@@ -197,9 +578,11 @@
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/fullscreen/fullscreen.js' },
 				{ src: 'plugin/notes/notes.js', async: true }
 			]
 		});
+		Reveal.configure({ slideNumber: true });
 	</script>
 </body>
 
