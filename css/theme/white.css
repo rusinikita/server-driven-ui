@@ -52,6 +52,7 @@ body {
   letter-spacing: normal;
   text-transform: uppercase;
   text-shadow: none;
+  text-align: left;
   word-wrap: break-word; }
 
 .reveal h1 {
@@ -95,6 +96,7 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
+  float: left;
   margin: 0 0 0 1em; }
 
 .reveal ol {

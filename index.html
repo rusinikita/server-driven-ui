@@ -29,39 +29,42 @@
 		<div class="slides">
 			<section>
 				<section>
-					<h1>ХХ и в продакшн без стыда</h1>
+					<h1>ХХ и в продакшн. Приём для быстрого выкатывания фич</h1>
 				</section>
 
 				<section>
-					<h2 style="text-align: left;">Проблематика</h2>
+					<h2>Проблематика</h2>
+				</section>
+				<section
+					data-background-image="https://www.improgrammer.net/wp-content/uploads/2018/02/Backend-developer.jpg">
+					<span style="color:white">Вы - обычный бэкенд-разработчик</span>
+				</section>
+				<section>
+					Что-то добавить, что-то убрать
+					<img data-src="lib/images/intro.jpg" width="30%" style="border:none;float:left">
+				</section>
+				<section>
+					<h2>Итого</h2>
 					<ul>
-						<!-- забавный бекграунд с фоткой Бори с нарисованной бородой -->
-						<li>Вы обычный бэкенд-разработчик</li>
-						<!-- TODO картинка экрана пользователя -->
-						<li>Экран информации пользователя</li>
-						<li>Нужно добавить 2 поля, а одно убрать</li>
-						<li>По человекодню на каждом клиенте и на беке</li>
-						<li>А потом ждать пока пользователи обновятся</li>
-						<li>Поддерживать обратную совместимость в API</li>
-						<!-- Картинка мема с грустящим чуваком просыпающим песок -->
-						<li>PM/PO/бизнес расстроен</li>
-						<li>Знакомо? Возможно, вы не понимаете почему так</li>
-						<li>Я расскажу, почему так и как сделать, чтобы подобные изменения требовали только за 2 часа
-							бэкендера</li>
-						<li>Как сделать систему целиком максимально гибкой</li>
+						<li class="fragment">По человекодню на каждом клиенте и на бэке</li>
+						<li class="fragment">А потом ждать пока пользователи обновятся</li>
+						<li class="fragment">Поддерживать обратную совместимость в API</li>
 					</ul>
+				</section>
+				<section data-background-image="https://i.imgflip.com/3iu963.jpg">
+					<span style="color:white">PM/PO/бизнес расстроен</span>
+					<h6 class="fragment" style="color:white">Почему так дорого?<h6>
 				</section>
 
 				<section>
 					<h2 style="text-align: left;">Никита Русин</h2>
 					<ul>
-						<li>Разработчик</li>
-						<li>Ex. android lead KODE</li>
-						<li>Много смотрел, слушал и читал</li>
-						<li>Много думал</li>
-						<li>Много делал</li>
-						<li>Давал советы и смотрел что будет</li>
-						<li>Сейчас ассимилируюсь в App in the Air</li>
+						<li class="fragment">Разработчик</li>
+						<li class="fragment">Много смотрел, слушал и читал</li>
+						<li class="fragment">Много думал и делал</li>
+						<li class="fragment">Давал советы и смотрел что будет</li>
+						<li class="fragment">Ex. android lead KODE</li>
+						<li class="fragment">Сейчас ассимилируюсь в App in the Air</li>
 					</ul>
 				</section>
 			</section>
@@ -69,7 +72,7 @@
 			<section>
 				<section>
 					<h1>Почему так долго, ведь всё же просто</h1>
-					Немного истории
+					Немного истории (Skip me)
 				</section>
 				<section>
 					<h1>Было время, когда всё было просто</h1>
@@ -151,7 +154,6 @@
 				</section>
 				<section>
 					<h1>Где часто менять проще всего?</h1>
-					<h6 class="fragment">В заднем конце</h6>
 				</section>
 				<section data-background-image="https://media.giphy.com/media/12gTXYTS09oST6/giphy.gif">
 					<h1><span style="color:white">Микросервисы</span></h1>
@@ -170,10 +172,14 @@
 							href="https://www.youtube.com/watch?v=RYQyA4VmnJo">link</a> <a
 							href="https://proandroiddev.com/dynamic-screens-using-server-driven-ui-in-android-262f1e7875c1">link</a>
 					</p>
-					<p>TODO Картинка где водит сервер</p>
+				</section>
+				<section data-background-image="https://i.imgflip.com/89bvo.jpg">
 				</section>
 				<!-- Не будем пытаться съесть слона за один присест. Обобщим, но ровно столько сколько нужно, с заделом на недалёкое будущее -->
 				<!-- пример с пагинацией для разогрева -->
+				<section>
+					Skip next, press ->
+				</section>
 				<section>
 					<h2>Hypermedia API - минимизация клиентской логики</h2>
 					<h6>Пользователь</h6>
@@ -184,23 +190,25 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Пример: Разные разрешения для разных ролей и статусов</h2>
+					<h2>Пример: Разные действия для разных статусов</h2>
 					<!-- Разные плитки перехода к функционалу для разных ролей -->
 					<!-- Разные ограничения действий с картами -->
 					<!-- TODO -->
 				</section>
 				<section>
 					<h2>Пример: Разные разрешения для разных ролей и статусов</h2>
-					<pre><code class="js" data-line-numbers="2-7|8-11|12-15|12,16|2-20">
-						{
-							"cards": [
-								{
-									"url": "kitty.jpg",
-									"shape": "circle",
-									"gravity": "center"
-								}
-							] 
-						}
+					<pre><code class="js">
+{
+	"cards": [
+		{
+			"number": "...",
+			"bg": "...",
+			"actions": ["block", "copy", "history", "change_pin"]
+			# вместо
+			"status": "active" # и клиент зашивает логику, что это значит
+		}
+	] 
+}
 						
 											</code></pre>
 				</section>
@@ -221,8 +229,8 @@
 				<section data-background-image="lib/images/info_4.jpg"></section>
 				<section data-background-image="lib/images/info_5.jpg"></section>
 				<section data-background-image="lib/images/info_6.jpg"></section>
-				<section data-fullscreen>
-					<h6>JSON API</h6>
+				<section>
+					<h6>JSON Компонента компонентов</h6>
 					<pre><code class="js" data-line-numbers="2-7|8-11|12-15|12,16|2-20">
 {
 	"image.1": {
@@ -251,7 +259,8 @@
 					<h1 class="fragment">Как хотите,</h1>
 					<h6 class="fragment">Но могу направить</h6>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример роута</h6>
 					<pre><code class="python">
 @app.route('/component/&lt;path:component_id&gt;')
 def get_component(component_id: str):
@@ -263,7 +272,8 @@ def get_component(component_id: str):
 	)
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример декоратора</h6>
 					<pre><code class="python">
 @component('v2', 'group_1')
 def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
@@ -275,7 +285,8 @@ def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
 		.buld()
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример с ошибкой</h6>
 					<pre><code class="python">
 @component('v2', 'group_1')
 def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
@@ -295,7 +306,8 @@ def very_impornant_screen(context: Context, user_id: str) -> List[Row]:
 		)
 				</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример на kotlin</h6>
 					<pre><code class="kotlin">
 @Component('v2', 'group_1')
 fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
@@ -312,19 +324,18 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 				</code></pre>
 				</section>
 				<section data-background-image="https://media.giphy.com/media/PK4XAT9Ususco/giphy.gif">
-					<h3>Вопросы и возражения</h3>
 				</section>
 				<section>
 					<h5>Возражения:</h5>
 					<ul>
-						<li class="fragment">Убого будет выглядеть, неконсистентно</li>
-						<li class="fragment">Сложно/долго делать</li>
-						<li class="fragment">Больше трафика</li>
-						<li class="fragment">Без офлайна</li>
-						<li class="fragment">Обратная совместимость</li>
+						<li>Убого будет выглядеть, неконсистентно</li>
+						<li>Сложно/долго делать</li>
+						<li>Больше трафика</li>
+						<li>Без офлайна</li>
+						<li>Обратная совместимость</li>
 					</ul>
 				</section>
-			</section data-fullscreen>
+			</section>
 			</section>
 
 			<section>
@@ -332,11 +343,29 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 					<h3>Навигация, списки, пагинация, поиск</h3>
 				</section>
 				<section>
+					<h3>Иерархия компонентов</h3>
+				</section>
+				<section>
+					<h6>Пример вложенности</h6>
+					<pre><code class="js" data-line-numbers="2-5|6-9|">
+{
+	"vertical_scroll.1": {
+		"components": [...]
+	},
+	"async.1": {
+		"link": "/component/id_dsfdsf?df=sd,dfs=dsf",
+		"collapsing": false
+	},
+}
+	
+					</code></pre>
+				</section>
+				<section>
 					<h3>Навигация, действия</h3>
 				</section>
-				<section data-fullscreen>
-					<h6>JSON API</h6>
-					<pre><code class="js" data-line-numbers="2-16|4|7|8|12">
+				<section>
+					<h6>Пример кнопок</h6>
+					<pre><code class="js" data-line-numbers="|4|7|8|12">
 {
 	"button_grid.1": {
 		"chain_type": "start|packed"
@@ -355,7 +384,8 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 	
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример пустого состояния экрана</h6>
 					<pre><code class="js">
 {
 	"empty_state.1": {
@@ -369,7 +399,8 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 	
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример списка с пагинацией</h6>
 					<pre><code class="js">
 {
 	"header": {
@@ -392,7 +423,8 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 	
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример поиска</h6>
 					<pre><code class="js">
 {
 	"header": {
@@ -428,7 +460,8 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 					<img data-src="lib/images/form_2.jpg" width="30%" style="border:none">
 					<img data-src="lib/images/form_3.jpg" width="30%" style="border:none">
 				</section>
-				<section data-fullscreen>
+				<section>
+					<h6>Пример компонента формы</h6>
 					<pre><code class="js"  data-line-numbers="3-7|8-12|13-15|16-19|20-24">
 {
 	"text_input.1": {
@@ -457,7 +490,7 @@ fun veryImpornantScreen(context: Context, user_id: String): List&lt;Row&gt; {
 	
 					</code></pre>
 				</section>
-				<section data-fullscreen>
+				<section>
 					<pre><code class="python">
 @app.route('/component/&lt;path:component_id&gt;')
 def post_form(component_id: str):
@@ -468,9 +501,10 @@ def post_form(component_id: str):
 	)
 					</code></pre>
 				</section>
-				<section data-background-image="lib/images/talk.jpg"></section>
+				<section data-background-image="lib/images/talk.jpg">
+					<a href="https://docs.google.com/presentation/d/13YUiuyDesfuDBVi5395V415E_CUIy1ZKY3oJXCQzqyQ/edit?usp=sharing">link</a>
+				</section>
 				<section data-background-image="https://media.giphy.com/media/l4FGC3sZppT0imaty/giphy.gif">
-					Вопросы по формам
 				</section>
 				<section>
 					Вопрос безопасности
@@ -480,6 +514,16 @@ def post_form(component_id: str):
 				<section data-background-image="lib/images/flow.png">
 					<h1>Flow</h1>
 					<h6>Последовательность действий</h6>
+				</section>
+				<section>
+					<h3>Авторизация</h3>
+					<ol>
+						<li class="fragment">Форма логин/пароль</li>
+						<li class="fragment">Форма данные пользователя</li>
+						<li class="fragment">Экран соглашения с кнопкой</li>
+						<li class="fragment">Экран с просьбой подтвердить почту</li>
+						<li class="fragment">Экран перехода по ссылке из почты. Финиш</li>
+					</ol>
 				</section>
 				<section>
 					<h1>Два стула</h1>
@@ -496,24 +540,14 @@ def post_form(component_id: str):
 						<li class="fragment">Payload</li>
 					</ul>
 				</section>
-				<section data-fullscreen>
-					<h6>В ответ на форму</h6>
+				<section>
+					<h6>Навигация в ответ на форму</h6>
 					<pre><code class="js">
 {
 	"next_link": "..."
 }
 	
 					</code></pre>
-				</section>
-				<section>
-					<h3>Авторизация</h3>
-					<ol>
-						<li class="fragment">Форма логин/пароль</li>
-						<li class="fragment">Форма данные пользователя</li>
-						<li class="fragment">Экран соглашения с кнопкой</li>
-						<li class="fragment">Экран с просьбой подтвердить почту</li>
-						<li class="fragment">Экран перехода по ссылке из почты. Финиш</li>
-					</ol>
 				</section>
 			</section>
 			<section>
@@ -551,7 +585,9 @@ def post_form(component_id: str):
 						Зубки не красивые, пузико появляется, робот плохо пылесосит, Дж. Мартин долго книгу пишет
 					</aside>
 				</section>
-				<section data-background-image="lib/images/lona.jpg"></section>
+				<section data-background-image="lib/images/lona.jpg">
+					<a href="https://github.com/airbnb/Lona">link</a>
+				</section>
 			</section>
 
 			<section>
@@ -560,7 +596,7 @@ def post_form(component_id: str):
 			</section>
 			<section>
 				<h1>Спасибо</h1>
-				TODO Контакт и ссылки
+				@rusinikita
 			</section>
 
 		</div>
@@ -574,11 +610,15 @@ def post_form(component_id: str):
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
 			hash: true,
+			width: "95%",
+			height: "95%",
+			margin: 0,
+			minScale: 1,
+			maxScale: 1,
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/highlight/highlight.js' },
-				{ src: 'plugin/fullscreen/fullscreen.js' },
 				{ src: 'plugin/notes/notes.js', async: true }
 			]
 		});
